@@ -36,7 +36,6 @@ reset:
 
   lda #%00000110 ; SET DISPLAY TO SHIFT THE CURSOR TO THE RIGHT, SET TO NOT SHIFT DISPLAY
   sta PORTB
-<<<<<<< HEAD
   lda #0         ; CLEAR RS/RW/E bits
   sta PORTA
   lda #E         ; TOGGLE ENABLE BIT FOR SENDING THE INSTRUCTION
@@ -46,11 +45,11 @@ reset:
 
   lda #%00000001 ; CLEAR DISPLAY
   sta PORTB
-=======
->>>>>>> c8cb732d0593733a7dd2f34a15a3fa8a597ccc62
   lda #0         ; CLEAR RS/RW/E bits
   sta PORTA
   lda #E         ; TOGGLE ENABLE BIT FOR SENDING THE INSTRUCTION
+  sta PORTA
+  lda #0         ; CLEAR RS/RW/E bits
   sta PORTA
 
   lda #"H"	 ; WRITE H 
