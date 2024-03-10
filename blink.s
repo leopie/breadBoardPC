@@ -54,14 +54,119 @@ reset:
   sta PORTA
 
   lda #"H"	 ; WRITE H 
-  sta PORTB
-  
+  sta PORTB 
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+  lda #(RS | E)  ; KEEP RS SET AND TOGGLE ENABLE BIT FOR SENDING THE INSTRUCTION
+  sta PORTA
   lda #RS        ; SET RS AND CLEAR RW/E bits
   sta PORTA
 
+  lda #"e"       ; WRITE H
+  sta PORTB
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
   lda #(RS | E)  ; KEEP RS SET AND TOGGLE ENABLE BIT FOR SENDING THE INSTRUCTION
   sta PORTA
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
 
+  lda #"l"       ; WRITE H
+  sta PORTB
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+  lda #(RS | E)  ; KEEP RS SET AND TOGGLE ENABLE BIT FOR SENDING THE INSTRUCTION
+  sta PORTA
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+
+  lda #"l"       ; WRITE H
+  sta PORTB
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+  lda #(RS | E)  ; KEEP RS SET AND TOGGLE ENABLE BIT FOR SENDING THE INSTRUCTION
+  sta PORTA
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+
+  lda #"o"       ; WRITE H
+  sta PORTB
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+  lda #(RS | E)  ; KEEP RS SET AND TOGGLE ENABLE BIT FOR SENDING THE INSTRUCTION
+  sta PORTA
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+
+  lda #","       ; WRITE H
+  sta PORTB
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+  lda #(RS | E)  ; KEEP RS SET AND TOGGLE ENABLE BIT FOR SENDING THE INSTRUCTION
+  sta PORTA
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+
+  lda #" "       ; WRITE H
+  sta PORTB
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+  lda #(RS | E)  ; KEEP RS SET AND TOGGLE ENABLE BIT FOR SENDING THE INSTRUCTION
+  sta PORTA
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+
+  lda #"w"       ; WRITE H
+  sta PORTB
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+  lda #(RS | E)  ; KEEP RS SET AND TOGGLE ENABLE BIT FOR SENDING THE INSTRUCTION
+  sta PORTA
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+
+  lda #"o"       ; WRITE H
+  sta PORTB
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+  lda #(RS | E)  ; KEEP RS SET AND TOGGLE ENABLE BIT FOR SENDING THE INSTRUCTION
+  sta PORTA
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+
+  lda #"r"       ; WRITE H
+  sta PORTB
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+  lda #(RS | E)  ; KEEP RS SET AND TOGGLE ENABLE BIT FOR SENDING THE INSTRUCTION
+  sta PORTA
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+
+  lda #"l"       ; WRITE H
+  sta PORTB
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+  lda #(RS | E)  ; KEEP RS SET AND TOGGLE ENABLE BIT FOR SENDING THE INSTRUCTION
+  sta PORTA
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+
+  lda #"d"       ; WRITE H
+  sta PORTB
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+  lda #(RS | E)  ; KEEP RS SET AND TOGGLE ENABLE BIT FOR SENDING THE INSTRUCTION
+  sta PORTA
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+
+  lda #"!"       ; WRITE H
+  sta PORTB
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+  lda #(RS | E)  ; KEEP RS SET AND TOGGLE ENABLE BIT FOR SENDING THE INSTRUCTION
+  sta PORTA
   lda #RS        ; SET RS AND CLEAR RW/E bits
   sta PORTA
 
