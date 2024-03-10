@@ -4,9 +4,9 @@ DDRB = $6002
 PORTA = $6001
 DDRA = $6003
 
-E  = %1000000
-RW = %0100000
-RS = %0010000
+E  = %10000000
+RW = %01000000
+RS = %00100000
 
   .org $8000
 
@@ -44,18 +44,6 @@ reset:
   lda #%00000110 ; SET DISPLAY TO SHIFT THE CURSOR TO THE RIGHT, SET TO NOT SHIFT DISPLAY
   sta PORTB
 
-  lda #RS         ; SET RS AND CLEAR RW/E bits
-  sta PORTA
-
-  lda #(RS | E)         ; KEEP RS SET AND TOGGLE ENABLE BIT FOR SENDING THE INSTRUCTION
-  sta PORTA
-
-  lda #RS         ; SET RS AND CLEAR RW/E bits
-  sta PORTA
-
-  lda #"H"	 ; WRITE H 
-  sta PORTB
-
   lda #0         ; CLEAR RS/RW/E bits
   sta PORTA
 
@@ -63,6 +51,18 @@ reset:
   sta PORTA
 
   lda #0         ; CLEAR RS/RW/E bits
+  sta PORTA
+
+  lda #"H"	 ; WRITE H 
+  sta PORTB
+  
+  lda #RS        ; SET RS AND CLEAR RW/E bits
+  sta PORTA
+
+  lda #(RS | E)  ; KEEP RS SET AND TOGGLE ENABLE BIT FOR SENDING THE INSTRUCTION
+  sta PORTA
+
+  lda #RS        ; SET RS AND CLEAR RW/E bits
   sta PORTA
 
 loop:
